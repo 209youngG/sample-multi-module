@@ -21,6 +21,8 @@ subprojects {
     plugins.apply("io.spring.dependency-management")
 
     dependencies {
+        implementation("org.apache.commons:commons-lang3")
+        implementation("org.apache.commons:commons-collections4:4.4")
         implementation("org.projectlombok:lombok")
         annotationProcessor("org.projectlombok:lombok")
         implementation("org.springframework.boot:spring-boot-starter-web")
