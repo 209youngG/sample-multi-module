@@ -1,5 +1,10 @@
 rootProject.name = "sample-multi-module"
 include("sample-common")
-include("sample-core")
-include("sample-core:domain-jpa")
 include("sample-core:infra")
+include("sample-core:client")
+include("sample-apis:internal-api")
+include("sample-core:domain")
+include("sample-core:domain:rdb")
+include("sample-apis:external-api")
+include("sample-batch")
+include("sample-admin")

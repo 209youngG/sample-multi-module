@@ -1,5 +1,5 @@
 import org.junit.jupiter.api.Test;
-import com.sample.utils.TimeUtil;
+import com.sample.common.utils.TimeUtil;
 
 import java.time.LocalDateTime;
 
