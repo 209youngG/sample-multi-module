@@ -1,4 +1,4 @@
-package com.sample.core.domain.rdb.entity.member;
+package com.sample.core.domain.rdb.member;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

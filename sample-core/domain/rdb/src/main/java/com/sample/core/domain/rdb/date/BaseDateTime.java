@@ -1,4 +1,4 @@
-package com.sample.core.domain.rdb.entity.date;
+package com.sample.core.domain.rdb.date;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;

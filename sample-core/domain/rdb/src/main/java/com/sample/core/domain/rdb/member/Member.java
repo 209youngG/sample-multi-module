@@ -1,6 +1,6 @@
-package com.sample.core.domain.rdb.entity.member;
+package com.sample.core.domain.rdb.member;
 
-import com.sample.core.domain.rdb.entity.date.BaseDateTime;
+import com.sample.core.domain.rdb.date.BaseDateTime;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -26,5 +26,9 @@ public class Member extends BaseDateTime {
 
 	public boolean isUser() {
 		return memberRole == MemberRole.USER;
+	}
+
+	public boolean isAdmin() {
+		return memberRole == MemberRole.ADMIN;
 	}
 }
