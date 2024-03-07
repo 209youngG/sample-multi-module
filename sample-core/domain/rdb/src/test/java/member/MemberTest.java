@@ -1,5 +1,8 @@
 package com.sample.entity.member;
 
+import com.sample.core.domain.rdb.member.Member;
+import com.sample.core.domain.rdb.member.MemberRole;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 
@@ -14,7 +17,7 @@ class MemberTest {
                 .memberRole(memberRole)
                 .build();
 
-        Assertions.assertThat(member.isUser()).isTrue();
+        assertThat(member.isUser()).isTrue();
     }
 
     @EnumSource(value = MemberRole.class, mode = EnumSource.Mode.EXCLUDE, names = "USER")
@@ -24,6 +27,6 @@ class MemberTest {
                 .memberRole(memberRole)
                 .build();
 
-        Assertions.assertThat(member.isUser()).isFalse();
+        assertThat(member.isUser()).isFalse();
     }
 }

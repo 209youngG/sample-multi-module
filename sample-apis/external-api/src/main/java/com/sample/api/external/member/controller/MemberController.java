@@ -1,9 +1,9 @@
-package com.sample.admin.member.controller;
+package com.sample.api.external.member.controller;
 
 import com.common.dto.SuccessResponse;
-import com.sample.admin.member.dto.MemberRequest;
-import com.sample.admin.member.dto.MemberResponse;
-import com.sample.admin.member.service.MemberServiceImpl;
+import com.sample.api.external.member.dto.MemberRequest;
+import com.sample.api.external.member.dto.MemberResponse;
+import com.sample.api.external.member.service.MemberServiceImpl;
 import io.swagger.v3.oas.annotations.Parameter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -21,16 +21,6 @@ public class MemberController {
     @GetMapping("/{memberId}")
     public ResponseEntity<SuccessResponse<MemberResponse>> getMember(@PathVariable long memberId) {
         MemberResponse responses = MemberResponse.to(memberService.getMember(memberId));
-
-        return ResponseEntity.ok(new SuccessResponse<>(1, "", responses));
-    }
-
-    @GetMapping("")
-    public ResponseEntity<SuccessResponse<List<MemberResponse>>> getMembers() {
-        List<MemberResponse> responses = memberService.getMembers()
-                .stream()
-                .map(MemberResponse::to)
-                .toList();
 
         return ResponseEntity.ok(new SuccessResponse<>(1, "", responses));
     }
