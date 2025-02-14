@@ -24,12 +24,14 @@ subprojects {
         implementation("org.apache.commons:commons-lang3")
         implementation("org.apache.commons:commons-collections4:4.4")
         implementation("org.projectlombok:lombok")
-        annotationProcessor("org.projectlombok:lombok")
         implementation("org.springframework.boot:spring-boot-starter-validation")
         implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0")
 
-        testImplementation("org.projectlombok:lombok")
+        annotationProcessor("org.projectlombok:lombok")
+
         testAnnotationProcessor("org.projectlombok:lombok")
+
+        testImplementation("org.projectlombok:lombok")
         testImplementation("org.springframework.boot:spring-boot-starter-test")
     }
 

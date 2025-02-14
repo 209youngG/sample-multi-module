@@ -2,6 +2,11 @@ tasks {
     "bootJar" { enabled = true }
     "jar" { enabled = false }
 }
+
+//springBoot{
+//    mainClass.set("com.sample.admin.SampleAdminApplication")
+//}
+
 dependencies {
     implementation(project(":sample-core:infra"))
     implementation(project(":sample-core:domain:rdb"))

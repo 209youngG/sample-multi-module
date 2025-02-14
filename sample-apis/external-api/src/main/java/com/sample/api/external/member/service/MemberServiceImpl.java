@@ -5,9 +5,9 @@ import com.sample.core.domain.rdb.member.Member;
 import com.sample.core.domain.rdb.member.MemberRepository;
 import com.sample.core.domain.rdb.member.MemberService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
+import org.springframework.web.ErrorResponseException;
 
 @Service
 @RequiredArgsConstructor
@@ -17,7 +17,7 @@ public class MemberServiceImpl implements MemberService {
 
     @Override
     public Member getMember(long memberId) {
-        return memberRepository.findById(memberId).orElseThrow(() -> new IllegalArgumentException("맴버가 없습니다."));
+        return memberRepository.findById(memberId).orElseThrow(() -> new ErrorResponseException(HttpStatus.NOT_FOUND));
     }
 
     public void saveMember(MemberRequest memberRequest) {

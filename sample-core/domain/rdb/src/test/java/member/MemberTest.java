@@ -1,8 +1,7 @@
-package com.sample.entity.member;
+package member;
 
 import com.sample.core.domain.rdb.member.Member;
 import com.sample.core.domain.rdb.member.MemberRole;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 

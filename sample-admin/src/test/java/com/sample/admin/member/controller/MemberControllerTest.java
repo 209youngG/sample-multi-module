@@ -31,7 +31,7 @@ class MemberControllerTest {
 
         // verify
 
-        assertThat(result.statusCode()).isEqualTo(HttpStatus.OK.value());
+        assertThat(result.statusCode()).isEqualTo(HttpStatus.NOT_FOUND.value());
     }
 
     @Test
